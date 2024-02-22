@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+    font-family: sans-serif;
+}
+
+.text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: transparent;
+    text-align: center;
+
+    background: linear-gradient(45deg, #fc2c77, #6c4079);
+    background-size: 400% 100%;
+    animation: degrade 20s linear infinite alternate;
+
+    -webkit-background-clip: text;
+}
+
+@keyframes degrade{
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-notes{
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e4e1e1;
+}
+
+.add{
+    text-decoration: none;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #8bc34a;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-show{
+    display: block;
+    padding: 1em;
+    font-size: 1em;
+    margin: .4em auto 1em;
+    background: #6c4079;
+    color: rgb(220, 228, 230);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-show:hover{
+    background-color: #fc2c77;
+    transition: .3s;
+}
+
+.titlesFlex{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.titles{
+    margin-bottom: .5em;
+    text-align: center;
+    padding-right: 2.5em;
+}
+
+/* Adicionar mais linhas */
+
+.flex, 
+.firstLine{
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 15px;
+}
+
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+input,
+.firstLine{
+    padding: 5px 10px;
+    background: #ddd;
+    border: none;
+    width: 50%;
+    border-radius: 5px;
+}
+
+input:focus,
+.firstLine{
+    outline: 1px solid #efefef;
+}
